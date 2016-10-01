@@ -27,8 +27,11 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver
 baseNavigatorWaiting = true
 atCheckWaiting = true
 
+//keeps the browser open after test if FALSE
+quitCachedDriverOnShutdown = true
+
 //When extending GebReportingSpec it will snap shot the html and a sreenshot. This is where they go
-reportsDir = "build/geb-reports"
+reportsDir = "build/reports"
 
 //****HtmlUnitDriver as the default driver *****//
 driver = { new HtmlUnitDriver(true) }
@@ -37,7 +40,7 @@ environments {
 
   htmlunit { driver = { new HtmlUnitDriver(true) } }
 
-  // run as "grails -Dgeb.env=chrome test-app functional:"
+  // run as "grails -Dgeb.env=chrome test-app -integration"
   // See: https://sites.google.com/a/chromium.org/chromedriver/
   chrome {
     // Download and configure ChromeDriver using https://github.com/bonigarcia/webdrivermanager
@@ -51,7 +54,7 @@ environments {
     driver = { new ChromeDriver() }
   }
 
-  // run as "grails -Dgeb.env=ie test-app functional:"
+  // run as "grails -Dgeb.env=ie test-app -integration"
   // See: https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
   ie {
     // Download and configure InternetExplorerDriver using https://github.com/bonigarcia/webdrivermanager
