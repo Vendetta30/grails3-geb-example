@@ -11,7 +11,7 @@ import geb.spock.*
  */
 @Integration
 @Rollback
-class SkydiveSpec extends GebSpec {
+class SkydiveGebSpec extends GebSpec {
 
     def setup() {
     }
