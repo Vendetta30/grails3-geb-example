@@ -2,19 +2,19 @@
 a basic example of geb in grails for functional testing
 follow the commits from the beginning to see what was done
 
-1. commit 301e
+### commit 5916b63560ab314a0bcfa66ff54e31de8102301e
 ran ```grails create-app grails3-geb-example```
 stock
 
-2. commit 393f
+### commit 393f
 `grails create-domain-class geb.Skydive` and `grails create-scaffold-controller geb.Skydive` . can do a run-app now fo
 - removed the spec test created for the domain
 - added gitignore and readme
 
-3. commit 8af4
+### commit 8af4
 `create-functional-test geb.Skydive` and `test-app -integration` works with a single test against the app using the st
 
-4. commit 4b0c
+### commit 4b0c
 added GebConfig and deps with build.grade tweaks to pass system properties. `grails -Dgeb.env= phantom test-app` ... w
 Environments setup for
 * phantom - `-Dgeb.env=phantom test-app`
@@ -23,12 +23,12 @@ Environments setup for
 * htmlunit - default but can be run with cli params
 see comments in gebconfig about firefox mess
 
-5. commit 28837
+### commit 28837
 segregating running test-app by types : keep all get functional tests in the geb package folder and add others in the
 now we can run `test-app geb* -integration` for geb functionals assuming we keep them all under the geb package.
 and `test-app org.* -integration` for standard grail integration tests
 
-6. commit bef291
+### commit bef291
 Setup for GebReportingSpec and screen shots. More advanced testing examples
 - extending from GebReportingSpec vs GebSpec will have screenshots and output captured after each test
 - reportsDir setup in gebconfig
