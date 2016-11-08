@@ -32,6 +32,8 @@ quitCachedDriverOnShutdown = true
 
 //When extending GebReportingSpec it will snap shot the html and a sreenshot. This is where they go
 reportsDir = "build/reports"
+// if true then only failed tests generate the screenshot output in above
+//reportOnTestFailureOnly = true
 
 //****HtmlUnitDriver as the default driver *****//
 driver = { new HtmlUnitDriver(true) }
